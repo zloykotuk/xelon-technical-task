@@ -24,6 +24,7 @@ services:
             - sail
         depends_on:
             - pgsql
+            - redis
     pgsql:
         image: 'postgres:15'
         ports:
@@ -38,9 +39,19 @@ services:
             - './vendor/laravel/sail/database/pgsql/create-testing-database.sql:/docker-entrypoint-initdb.d/10-create-testing-database.sql'
         networks:
             - sail
+    redis:
+        image: 'redis:alpine'
+        ports:
+            - '${FORWARD_REDIS_PORT:-6379}:6379'
+        volumes:
+            - 'sail-redis:/data'
+        networks:
+            - sail
 networks:
     sail:
         driver: bridge
 volumes:
     sail-pgsql:
+        driver: local
+    sail-redis:
         driver: local

@@ -17,6 +17,6 @@ Broadcast::channel('App.Models.User.{id}', function ($user, $id) {
     return (int) $user->id === (int) $id;
 });
 
-Broadcast::channel('currency', function () {
-    return ['123'];
+Broadcast::channel('currency-info', function () {
+    return ['hello' => 'world'];
 });
