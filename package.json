@@ -5,14 +5,15 @@
         "build": "vite build"
     },
     "devDependencies": {
-        "axios": "^1.1.2",
-        "laravel-vite-plugin": "^0.7.2",
-        "vite": "^4.0.0"
+        "axios": "^1.3.4"
     },
     "dependencies": {
-        "@vitejs/plugin-vue": "^4.0.0",
-        "laravel-echo": "^1.15.0",
+        "@tanstack/react-query": "^4.26.1",
+        "@vitejs/plugin-react": "^3.1.0",
+        "laravel-vite-plugin": "^0.7.4",
         "pusher-js": "^8.0.1",
-        "vue": "^3.2.47"
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0",
+        "vite": "^4.1.4"
     }
 }
