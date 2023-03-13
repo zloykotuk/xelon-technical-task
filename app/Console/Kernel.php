@@ -12,7 +12,7 @@ class Kernel extends ConsoleKernel
      */
     protected function schedule(Schedule $schedule): void
     {
-         $schedule->command('app:dispatch-update-currency')->everyMinute();
+         $schedule->command('app:dispatch-update-currency')->everyFifteenMinutes();
     }
 
     /**

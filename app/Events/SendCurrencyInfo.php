@@ -20,6 +20,11 @@ class SendCurrencyInfo implements ShouldBroadcast
     ) {
     }
 
+
+    public function broadcastAs(): string
+    {
+        return 'currency';
+    }
     /**
      * Get the channels the event should broadcast on.
      *
