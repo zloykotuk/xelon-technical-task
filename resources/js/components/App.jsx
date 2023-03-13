@@ -26,6 +26,10 @@ const App = () => {
             .bind('currency', (data) => {
                 setData(data?.currency ?? [])
             });
+
+        return () => {
+            pusher.unsubscribe('currency-info')
+        }
     }, []);
 
     return (
